@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Anselme</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #f4ece2;
+            color: #3e3e3e;
+            scroll-behavior: smooth;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* MENU NAVIGATION */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(60, 45, 30, 0.95);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        header .logo {
+            font-family: 'Roboto Slab', serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: #f5f0e1;
+        }
+
+        nav a {
+            margin-left: 25px;
+            font-weight: 600;
+            color: #f5f0e1;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #e2c28d;
+        }
+
+        /* SECTIONS */
+        section {
+            min-height: 100vh;
+            padding: 100px 50px 50px 50px;
+        }
+
+        .hero {
+            background: url('nostalgic-bg.jpg') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fffaf0;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(60,45,30,0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-family: 'Roboto Slab', serif;
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        /* PROFILE / ABOUT */
+        .about {
+            background: #fdf6ed;
+            border-left: 6px solid #e2c28d;
+            padding: 30px;
+            max-width: 800px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .about h2 {
+            font-family: 'Roboto Slab', serif;
+            color: #3e3e3e;
+            margin-bottom: 15px;
+        }
+
+        .about p {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .skills ul {
+            list-style: square;
+            padding-left: 20px;
+        }
+
+        .skills li {
+            margin-bottom: 8px;
+        }
+
+        /* EXPERIENCE / EDUCATION */
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            background: #fffaf0;
+            border: 2px solid #e2c28d;
+            border-radius: 10px;
+            padding: 20px;
+            width: 250px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+        }
+
+        .card h3 {
+            font-family: 'Roboto Slab', serif;
+            margin-bottom: 10px;
+            color: #3e3e3e;
+        }
+
+        .card p {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            background: #3c2d1e;
+            color: #f5f0e1;
+            font-size: 14px;
+        }
+
+        /* MEDIA QUERY */
+        @media(max-width: 768px){
+            header {
+                flex-direction: column;
+                padding: 10px 20px;
+            }
+            nav {
+                margin-top: 10px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .cards {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- MENU -->
+    <header>
+        <div class="logo">Anselme</div>
+        <nav>
+            <a href="#about">À propos</a>
+            <a href="#skills">Compétences</a>
+            <a href="#experience">Expérience</a>
+            <a href="#education">Éducation</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Bonjour, je suis Anselme</h1>
+            <p>Étudiant à l'EMIT Fianarantsoa, passionné par le cinéma, la photographie et le sport. Découvrez mon parcours et mes compétences.</p>
+        </div>
+    </section>
+
+    <!-- ABOUT / PROFILE -->
+    <section id="about" class="about">
+        <h2>Profil</h2>
+        <p>Un étudiant débutant dans le parcours à l'université EMIT (École de management et d'innovation technologique) à Fianarantsoa. Innovant, dynamique, organisé et motivé, je suis un étudiant déterminé à progresser et à explorer de nouvelles compétences.</p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="about">
+        <h2>Compétences</h2>
+        <div class="skills">
+            <ul>
+                <li>HTML / CSS</li>
+                <li>Python</li>
+                <li>Communication</li>
+                <li>Gestion d'équipe</li>
+                <li>Travail collaboratif</li>
+                <li>Langues : Malagasy, Français, Anglais</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+        <h2 style="text-align:center; margin-bottom:30px;">Expérience professionnelle</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Coordination en travail d'équipe</h3>
+                <p>Expérience dans la coordination et la gestion de projets collaboratifs.</p>
+            </div>
+            <div class="card">
+                <h3>Analyse scientifique</h3>
+                <p>Suivi et analyse des résultats scientifiques pour les travaux universitaires.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+        <h2 style="text-align:center; margin-bottom:30px;">Éducation</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>BEPC</h3>
+                <p>2020-2021 : Obtention du BEPC</p>
+            </div>
+            <div class="card">
+                <h3>BACC</h3>
+                <p>2024-2025 : Obtention du BACC</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="about">
+        <h2>Contact</h2>
+        <p>Numéro : 038218617<br>
+           Email : razafisonvander@gmail.com<br>
+           Lieu : Andrainjato
+        </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        &copy; 2026 Anselme. Tous droits réservés.
+    </footer>
+
+</body>
+</html>
